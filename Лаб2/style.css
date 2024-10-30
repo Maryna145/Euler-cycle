@@ -43,7 +43,7 @@ h3 {
   border-radius: 10px;
   padding: 8px 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 600px;
+  width: 790px;
   outline: none;
   pointer-events: none;
 }
@@ -68,7 +68,6 @@ textarea {
   resize: vertical;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 textarea:focus {
@@ -137,7 +136,8 @@ button:hover {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#mynetwork:focus, #mynetwork:hover {
+#mynetwork:focus,
+#mynetwork:hover {
   border-color: #8a2be2;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -156,4 +156,7 @@ button:hover {
     max-width: 90%;
     height: 300px;
   }
+}
+.highlight {
+  background-color: yellow;
 }
