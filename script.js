@@ -186,3 +186,7 @@ function findEulerianCycle() {
 
 //побудова графа при завантаженні сторінки
 window.onload = buildGraph;
+function Clean() {
+  document.querySelector(".inputRes").value = " ";
+   document.getElementById("matrixInput1").value = " ";
+}
