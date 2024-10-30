@@ -157,11 +157,11 @@ function findEulerianCycle() {
     return cycle;
   }
 
-  // перевірка зв'язності та парності
+  //перевірка зв'язності та парності
   if (checkGraphConnectivity() && checkVertexDegrees()) {
     const cycle = findEulerianPath();
 
-    // оновлюємо граф з виділеними ребрами ейлерового циклу
+    //оновлюємо граф з виділеними ребрами ейлерового циклу
     const edges = window.network.body.data.edges;
     let highlightEdges = [];
     for (let i = 0; i < cycle.length - 1; i++) {
