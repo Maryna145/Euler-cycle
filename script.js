@@ -87,23 +87,23 @@ function findEulerianCycle(matrix) {
   }); 
   //перевірка графу на зв'язність
   function dfc() {
-    let visited = new Array(adjacencyMatrix.length).fill(false); // масив для відмітки відвіданих вершин
+    let visited = new Array(adjacencyMatrix.length).fill(false); //масив для відмітки відвіданих вершин
 
     function dfs(vertex) {
-      visited[vertex] = true; // відмічаємо поточну вершину як відвідану
+      visited[vertex] = true; //відмічаємо поточну вершину як відвідану
 
-      // Проходимо по всіх сусідах
+      //проходимо по всіх сусідах
       for (let i = 0; i < adjacencyMatrix[vertex].length; i++) {
         if (adjacencyMatrix[vertex][i] === 1 && !visited[i]) {// перевіряємо, чи є ребро
-          dfs(i); // рекурсивний виклик для сусідньої вершини
+          dfs(i); //рекурсивний виклик для сусідньої вершини
         }
       }
     }
 
-    // Запускаємо DFS з першої вершини (вказуємо 0, якщо індексація з 0)
+    // починаємо з першої вершини 
     dfs(0);
 
-    // Перевіряємо, чи всі вершини були відвідані
+    //чи всі вершини були відвідані
     const isConnected = visited.every((v) => v);
     document.querySelector(".inputRes").innerHTML = document.querySelector(
       ".inputRes"
